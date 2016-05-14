@@ -12,9 +12,11 @@ items: items
 });
 
 router.post('/tasks', function(req, res, next) {
-var task = new ItemModel({
+var item = new ItemModel({
   item : req.body.item
+  quantity : req.body.quantity
 });
+
 
 task.save(function(err, task) {
 
