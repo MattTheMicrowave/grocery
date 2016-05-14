@@ -13,7 +13,7 @@ items: items
 
 router.post('/tasks', function(req, res, next) {
 var item = new ItemModel({
-  item : req.body.item
+  item : req.body.item,
   quantity : req.body.quantity
 });
 
