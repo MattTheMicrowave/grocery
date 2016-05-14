@@ -7,5 +7,25 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <form method="POST" action="/items">
+      <input type="text" name="item">
+      <input type="submit" value="Submit">
+    </form>
+
+    <form method="POST" action="/quantity">
+      <input type="text" name="quantity">
+      <input type="submit" value="Submit">
+    </form>
+
+    <ul>
+      <% for (item in items) { %>
+        <li><%= items[item]['item'] %> - <%=items[item]['quantity'] %></li>
+        <% } %>
+      </ul>
+
+
+
+    </ul>
   </body>
 </html>
