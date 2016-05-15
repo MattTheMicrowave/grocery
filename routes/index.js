@@ -11,14 +11,14 @@ items: items
 });
 });
 
-router.post('/tasks', function(req, res, next) {
+router.post('/items', function(req, res, next) {
 var item = new ItemModel({
-  item : req.body.item,
+  verdura : req.body.verdura,
   quantity : req.body.quantity
 });
 
 
-task.save(function(err, task) {
+item.save(function(err, item) {
 
 res.redirect('/');
 

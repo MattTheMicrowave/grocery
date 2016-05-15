@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var itemSchema = new Schema({
 
-  'item' : String,
+  'verdura' : String,
   'quantity' : Number
 });
 

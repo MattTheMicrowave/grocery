@@ -9,23 +9,24 @@
     <p>Welcome to <%= title %></p>
 
     <form method="POST" action="/items">
-      <input type="text" name="item">
+      <input type="text" name='verdura'>
+      <input type="text" name='quantity'>
       <input type="submit" value="Submit">
     </form>
 
-    <form method="POST" action="/quantity">
+  <!-- <form method="POST" action="/items">
       <input type="text" name="quantity">
       <input type="submit" value="Submit">
-    </form>
+    </form> -->
 
     <ul>
       <% for (item in items) { %>
-        <li><%= items[item]['item'] %> - <%=items[item]['quantity'] %></li>
+        <li><%= items[item]['verdura'] %> - <%= items[item]['quantity'] %></li>
         <% } %>
       </ul>
 
 
 
-    </ul>
+
   </body>
 </html>
