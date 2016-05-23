@@ -5,28 +5,30 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1 id="listTitle"><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
     <form method="POST" action="/items">
       <input type="text" name='verdura'>
-      <h4>tipo de verdura</h4>
+      <h4>^^^primero, ponga el tipo de verdura arriba</h4>
       <input type="text" name='quantity'>
-      <h4>la cantidad</h4>
+      <h4>^^^segundo, ponga la cantidad tambien</h4>
       <input type="submit" value="Submit">
+      <h4>^^^tercero, presione 'Submit'</h4>
     </form>
 
   &nbsp
   <h2>Inventory</h2>
 
-    <ul>
+    <ul id="inventory">
       <% for (item in items) { %>
         <li><%= items[item]['verdura'] %> - <%= items[item]['quantity'] %></li>
         <% } %>
       </ul>
 
 
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+<script type="text/javascript" src="../javascripts/index.js"></script>
 
   </body>
 </html>
